@@ -4,7 +4,7 @@
 /////*insertSpaceAfterSemicolonInForStatements*/for (i = 0;i;    i++);
 /////*insertSpaceBeforeAndAfterBinaryOperators*/1+2-    3
 /////*insertSpaceAfterKeywordsInControlFlowStatements*/if     (true) { }
-/////*insertSpaceAfterFunctionKeywordForAnonymousFunctions*/(function               () { })
+/////*insertSpaceAfterFunctionKeywordForAnonymousFunctions*/(function               () { });(function*  () { })
 /////*insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis*/(1  )
 /////*insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets*/[1  ]; [ ]; []; [,];
 /////*insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces*/`${1}`;`${   1  }`
@@ -22,7 +22,7 @@ runTest("insertSpaceAfterCommaDelimiter", "[1, 2, 3];[72,];", "[1,2,3];[72,];");
 runTest("insertSpaceAfterSemicolonInForStatements", "for (i = 0; i; i++);", "for (i = 0;i;i++);");
 runTest("insertSpaceBeforeAndAfterBinaryOperators", "1 + 2 - 3", "1+2-3");
 runTest("insertSpaceAfterKeywordsInControlFlowStatements", "if (true) { }", "if(true) { }");
-runTest("insertSpaceAfterFunctionKeywordForAnonymousFunctions", "(function () { })", "(function() { })");
+runTest("insertSpaceAfterFunctionKeywordForAnonymousFunctions", "(function () { }); (function* () { })", "(function() { }); (function*() { })");
 runTest("insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis", "    ( 1 )", "    (1)");
 runTest("insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets", "[ 1 ];[];[];[ , ];", "[1];[];[];[,];");
 runTest("insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces", "`${ 1 }`; `${ 1 }`", "`${1}`; `${1}`");
